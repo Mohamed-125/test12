@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <script src="emails.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        overflow: auto;
+      }
+
+      table {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      thead tr {
+        padding: 20px;
+      }
+      thead,
+      tbody {
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        gap: 10px;
+        flex-direction: column;
+      }
+      tr {
+        display: flex;
+        overflow: hidden;
+        direction: rtl;
+        width: 100%;
+        gap: 30px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid black;
+        padding: 20px 20px;
+      }
+      td,
+      th {
+        min-width: 120px;
+        word-break: break-all;
+        flex: 1;
+      }
+      input {
+        padding: 3px 10px;
+        border-radius: 5px;
+        border: 1px solid;
+      }
+    </style>
+    <div
+      style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 20px 30px;
+        font-size: 20px;
+      "
+    >
+      <div>
+        <input type="text" />
+        <p class="searchResultsNum" style="margin-top: 20px"></p>
+      </div>
+
+      <p class="emails-number"></p>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>الاسم</th>
+          <th>البريد الالكتروني</th>
+          <th>رقم الهاتف</th>
+          <th>الخدمات المختاره</th>
+        </tr>
+      </thead>
+      <tbody class="emails-table"></tbody>
+    </table>
+  </body>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+    import {
+      doc,
+      getDocs,
+      getFirestore,
+      collection,
+    } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAXplhIXhVFdMS-nLX7EQDGU4BQvl5jR54",
+      authDomain: "teshreen-50baa.firebaseapp.com",
+      projectId: "teshreen-50baa",
+      storageBucket: "teshreen-50baa.appspot.com",
+      messagingSenderId: "892617858401",
+      appId: "1:892617858401:web:83b64da24bd35ed4c33920",
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const docsSnap = await getDocs(collection(db, "emails"));
+    let emails = [];
+    let visibleEmails = [];
+
+    docsSnap.forEach((doc) => {
+      emails.push(doc.data());
+    });
+
+    document.querySelector(".emails-table").innerHTML = "";
+
+    visibleEmails = emails.map((email) => {
+      const tr = document.createElement("tr");
+      tr.classList.add("email-div");
+      tr.innerHTML = `
+     <td>${email.name}</td>
+          <td>${email.email} </td>
+          <td>${email.phone} </td>
+          <td>${email.services}</td>`;
+      document.querySelector(".emails-table").append(tr);
+      console.log(email);
+      return { name: email.services, element: tr, isVisible: true };
+    });
+
+    document.querySelector(
+      ".emails-number"
+    ).innerHTML = ` عدد الايميلات : ${emails.length} `;
+
+    const searchWord = "";
+    const searchInput = document.querySelector("input");
+    searchInput.addEventListener("input", (e) => {
+      console.log(e.target.value);
+      visibleEmails.forEach((email) => {
+        const isVisible = email.name
+          .toLowerCase()
+          .includes(e.target.value.toLowerCase());
+        email.element.style.display = isVisible ? "flex" : "none";
+        email.isVisible = isVisible;
+      });
+      document.querySelector(".searchResultsNum").textContent = ` نتائج البحث : 
+        ${visibleEmails.filter((e) => e.isVisible === true).length}
+`;
+    });
+  </script>
+</html>

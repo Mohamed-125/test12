@@ -1,0 +1,87 @@
+@use "./styles/hero.scss";
+@use "./styles/nav.scss";
+@use "./styles/constans.scss";
+@use "./styles/features.scss";
+@use "./styles/footer.scss";
+@use "./styles/form.scss";
+@use "./styles/services.scss";
+
+$main-color: #eea5a3;
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "Neo Sans Arabic Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Neo Sans Arabic Regular"),
+    url("Neo Sans Arabic Regular.woff") format("woff");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+  // font-family: "Neo Sans Arabic Regular", sans-serif;
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 40px 15px;
+  }
+}
+
+@media (max-width: 550px) {
+  .email {
+    width: fit-content !important;
+  }
+}
+
+.swiper-container {
+  display: none !important;
+  margin-inline: auto;
+  overflow: hidden;
+  width: 95%;
+  max-width: 400px;
+  padding-bottom: 50px;
+}
+.swiper-pagination {
+  position: relative !important;
+  top: 20px !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #eea5a3 !important;
+}
+.swiper-pagination-bullet {
+  width: 11px !important;
+  height: 11px !important;
+}
+
+.multiselect-dropdown-list div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 !important;
+  padding-inline: 30px !important;
+  flex-direction: row-reverse;
+  input {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+.multiselect-dropdown-list-wrapper {
+  top: 52px !important;
+}
+
+@media (max-width: 400px) {
+  .swiper-container {
+    display: block !important;
+  }
+  .swiper-slide {
+    overflow: hidden;
+    scale: 0.98;
+    max-width: 400px;
+    position: relative;
+  }
+}

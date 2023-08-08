@@ -1,0 +1,88 @@
+$main-color: #eea5a3;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.title {
+  margin-block: 32px 20px;
+  position: relative;
+  width: fit-content;
+  margin-inline: auto;
+  direction: rtl;
+  font-size: 17px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    background-repeat: no-repeat;
+    height: 20px;
+    top: 50%;
+    left: 0;
+    transform: rotateY(180deg) translate(0%, -45%);
+    background-size: cover;
+  }
+  &::after {
+    right: -110px;
+    background-position: right;
+    background-image: url("./assests/left-arrow.png");
+  }
+  &::before {
+    left: -110px;
+    background-position: left;
+    background-image: url("./assests/right-arrow.png");
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+p {
+  font-size: 16px;
+  line-height: 25px;
+}
+.container {
+  padding: 45px 40px;
+  max-width: 1300px;
+  margin-inline: auto;
+}
+
+.whatsapp-icon:hover {
+  scale: 1.2;
+  opacity: 0.7;
+}
+
+@media (max-width: 950px) {
+  .title {
+    margin-block: 15px 15px;
+  }
+  .container {
+    padding: 45px 30px;
+  }
+  p {
+    font-size: 15.5px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 800px) {
+  .title {
+    &::before,
+    &::after {
+      width: 70px !important;
+    }
+
+    &::after {
+      right: -80px;
+    }
+    &::before {
+      left: -80px;
+    }
+  }
+  p {
+    font-size: 15px;
+  }
+}

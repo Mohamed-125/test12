@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="./index.js" defer></script>
+    <script src="./services.js" defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.1.0/swiper-bundle.min.js"
+      integrity="sha512-4Ooh3fl4STrmn95ZbS/J6l8csp/FvSKPaeDAH/IaPQGJIx9lmpuxXZTCYKR2W5+Bt7i74exPvAT2PsWnac+sow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.1.0/swiper-bundle.css"
+      integrity="sha512-xXQQj99PFpHikerkvc6HrA+dFLC14dMyBh0eL8fCan9h3n8Uhxvq5Os8ysEvn3oTLWJTte9kl5FFEftf2KfyHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <a
+      class="whatsapp-icon"
+      href="https://api.whatsapp.com/send/?phone=966503300942&text&type=phone_number&app_absent=0&utm_campaign=WhatsApp"
+      target="_blank"
+      style="
+        width: 45px;
+        height: 45px;
+        position: fixed;
+        z-index: 10000;
+        bottom: 18px;
+        opacity: 0.7;
+        right: 20px;
+        transition: 0.3s all ease;
+      "
+    >
+      <div>
+        <img
+          style="width: 100%"
+          src="https://cdn2.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-whatsapp-circle-1024.png"
+        />
+      </div>
+    </a>
+    <nav class="container">
+      <div>
+        <img src="./assests/Group.png" />
+      </div>
+      <i class="fa-solid fa-bars"></i>
+      <div class="nav-links">
+        <a href="#hero">من نحن</a>
+        <a href="#features">ما يميزنا</a>
+        <a href="#service">خدماتنا</a>
+        <a href="#contact-us">اتصل بنا</a>
+        <a href="#contact-us">حسابتنا</a>
+      </div>
+      <div class="mobile-nav-links">
+        <i class="fa-solid fa-xmark"></i>
+        <img src="./assests/Group.png" />
+
+        <a href="#hero">من نحن</a>
+        <a href="#features">ما يميزنا</a>
+        <a href="#service">خدماتنا</a>
+        <a href="#contact-us">اتصل بنا</a>
+        <a href="#contact-us">حسابتنا</a>
+      </div>
+    </nav>
+    <div id="hero" class="hero container">
+      <div>
+        <h2>فرحتك معنا أكبر وأجمل</h2>
+        <h4 class="title">من نحن</h4>
+        <p>
+          نحن فريق مختص بتنسيق جميع المناسبات على مستوى عالي من الاحترافية في
+          كافة أنحاء المملكة ودول الخليج . حيث نهتم بأدق التفاصيل على ان تتماشى
+          مع نفس الفكرة المطلوبة والتي ستنال إعجابكم بأذن الله .
+        </p>
+      </div>
+      <div><img src="assests/main-img.png" /></div>
+    </div>
+    <div id="features" class="features container">
+      <h4 class="title">ما يميزنا عن غيرنا</h4>
+      <div style="max-width: 650px; text-align: center; margin-inline: auto">
+        <p>
+          الاحترافية : يتكون فريقنا من خبراء في مختلف المجالات الذين لديهم سنوات
+          من الخبرة في تنظيم حفلات الزفاف والمناسبات الاجتماعية
+        </p>
+        <p>
+          التفاصيل والمواعيد : نولي اهتماما لكل التفاصيل الصغيرة ونتأكد من تخطيط
+          كل شيء وتنفيذه بوقت قياسي حسب الموعد المحدد
+        </p>
+        <p>
+          3D : نقوم بإنشاء نسخة 3D للتجهيزات بمـوقع الحفل او المناسبة وذلك مما
+          يسهل على العميل رؤية المكان قبل البدء في التنفيذ
+        </p>
+        <p>
+          أسعار : نحن نقدم باقات بأسعار معقولة لتناسب كل ميزانية، مما يجعلها في
+          متناول الجميع
+        </p>
+        <p>
+          العرض : يتوفر لدينا اخراج بث مباشر للحفلات أو المناسبات بشاشات عرض ليد
+        </p>
+      </div>
+      <div class="imgs">
+        <div>
+          <img src="./assests/features 1.png" />
+        </div>
+        <div>
+          <img class="middle-img" src="./assests/features 2.png" />
+        </div>
+        <div>
+          <img src="./assests/features 3.png" />
+        </div>
+      </div>
+    </div>
+    <div id="service" class="services container">
+      <h2 class="title">خدماتنا</h2>
+      <div class="services-grid"></div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <script>
+        localStorage.setItem("item", "hey");
+      </script>
+      <script>
+        var mySwiper = new Swiper(".swiper-container", {
+          spaceBetween: 30,
+          centeredSlides: true,
+          slidesPerView: 1,
+          pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+            clickable: true,
+          },
+        });
+      </script>
+    </div>
+
+    <h5 class="contact-us-title">
+      نسعد بوجودكم ولخدمتكم في حال رغبتكم في الحصول على عروض بكل جديد
+    </h5>
+    <div class="form container">
+      <form>
+        <div>
+          <input name="name" required placeholder="الأسم" type="text" />
+        </div>
+        <div>
+          <input
+            name="email"
+            required
+            type="email"
+            placeholder="البريد الالكتروني"
+          />
+        </div>
+        <div>
+          <input
+            name="phone"
+            required
+            type="number"
+            min="12"
+            placeholder="رقم الجوال"
+          />
+        </div>
+        <div style="position: relative">
+          <div class="services-div-input">
+            <span>➜</span>
+            <div class="services-div">
+              <div
+                class="services-div-selected"
+                style="
+                  display: flex;
+                  gap: 5px;
+                  justify-content: center;
+                  flex-wrap: wrap;
+                  direction: rtl;
+                "
+              ></div>
+              <div
+                style="
+                  display: flex;
+                  gap: 5px;
+                  flex-wrap: wrap;
+                  align-items: center;
+                  min-width: fit-content;
+                  direction: rtl;
+                "
+              >
+                <p>نوع الخدمة</p>
+              </div>
+            </div>
+          </div>
+          <div class="services-select">
+            <div class="service-select-div">
+              <div class="all-btn">الكل</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button type="submit">ارسال</button>
+        </div>
+      </form>
+    </div>
+    <div>
+      <footer id="contact-us" style="justify-content: center">
+        <div>
+          <div class="footer-social">
+            <div class="footer-div">
+              <img
+                src="assests/Group.png"
+                style="max-width: 350px; width: 100%; margin-bottom: 20px"
+              />
+            </div>
+
+            <h3>اتصل بنا</h3>
+            <div class="icons-div">
+              <a
+                href="https://api.whatsapp.com/send/?phone=966503300942&text&type=phone_number&app_absent=0&utm_campaign=WhatsApp"
+                target="_blank"
+              >
+                <div>
+                  <span>واتساب</span>
+                  <i class="fa-brands fa-whatsapp" style="color: #262626"></i>
+                </div>
+              </a>
+
+              <a href="mailto:TESHREEN@OUTLOOK.SA" target="_blank">
+                <div>
+                  <span>الايميل</span>
+                  <i class="fa-solid fa-envelope" style="color: #262626"></i>
+                </div>
+              </a>
+
+              <a href="https://t.me/+966503300942" target="_blank">
+                <div>
+                  <span>تيليجرام</span>
+                  <i class="fa-brands fa-telegram"></i>
+                </div>
+              </a>
+
+              <a href="tel:+966503300942" target="_blank">
+                <div>
+                  <!-- <span> +966 50 330 0942 </span> -->
+                  <span> الجوال </span>
+                  <i class="fa-solid fa-phone" style="color: #262626"></i>
+                </div>
+              </a>
+            </div>
+
+            <hr />
+
+            <h3>حسابتنا</h3>
+            <span
+              style="
+                display: flex;
+                gap: 10px;
+                margin-bottom: 35px;
+                align-items: center;
+              "
+            >
+              <a
+                href="https://twitter.com/teshreen_10?utm_medium=&utm_source=&utm_campaign=twitter"
+                target="_blank"
+              >
+                <div
+                  class="footer-icon"
+                  style="
+                    mix-blend-mode: difference;
+                    width: 46px;
+                    height: 46px;
+                    background-color: white;
+                  "
+                >
+                  <img
+                    style="scale: 1.4"
+                    src="https://1000logos.net/wp-content/uploads/2017/06/Twitter-Log%D0%BE-768x432.png"
+                  />
+                </div>
+                <a
+                  href="https://www.tiktok.com/@teshreen_10?utm_medium=&utm_source=&utm_campaign=tiktok"
+                  target="_blank"
+                >
+                  <div class="footer-icon">
+                    <img
+                      src="https://cdn.pixabay.com/photo/2021/06/15/12/28/tiktok-6338430_1280.png"
+                    />
+                  </div>
+                </a>
+              </a>
+              <a
+                href="https://www.instagram.com/teshreen.10/?utm_medium&utm_source&utm_campaign=instagram"
+                target="_blank"
+              >
+                <div class="footer-icon">
+                  <img src="./assests/instagram-icon.png" />
+                </div>
+              </a>
+              <a
+                href="https://www.snapchat.com/add/teshreen-10?share_id=MDhEREU3&locale=ar_SA@calendar=gregorian;numbers=latn&utm_medium=&utm_source=&utm_campaign=snapchat"
+                target="_blank"
+              >
+                <div class="footer-icon" style="mix-blend-mode: darken">
+                  <img
+                    style="mix-blend-mode: darken"
+                    src="https://www.pngfind.com/pngs/m/50-503437_snapchat-logo-png-snapchat-icons-black-and-white.png"
+                  />
+                </div>
+              </a>
+            </span>
+
+            <hr />
+          </div>
+
+          <p
+            style="
+              font-size: 20px;
+              display: flex;
+              position: relative;
+              top: 30px;
+              gap: 10px;
+              flex-direction: row-reverse;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            copyright2023.Teshreen
+            <svg
+              width="35"
+              height="35"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 1.875C8.39303 1.875 6.82214 2.35152 5.486 3.24431C4.14985 4.1371 3.10844 5.40605 2.49348 6.8907C1.87852 8.37535 1.71762 10.009 2.03112 11.5851C2.34463 13.1612 3.11846 14.6089 4.25476 15.7452C5.39106 16.8815 6.8388 17.6554 8.4149 17.9689C9.99099 18.2824 11.6247 18.1215 13.1093 17.5065C14.594 16.8916 15.8629 15.8502 16.7557 14.514C17.6485 13.1779 18.125 11.607 18.125 10C18.1209 7.84638 17.2635 5.78216 15.7407 4.25932C14.2178 2.73648 12.1536 1.87913 10 1.875ZM10 16.875C8.64026 16.875 7.31105 16.4718 6.18046 15.7164C5.04987 14.9609 4.16868 13.8872 3.64833 12.6309C3.12798 11.3747 2.99183 9.99237 3.2571 8.65875C3.52238 7.32513 4.17716 6.10013 5.13864 5.13864C6.10013 4.17716 7.32514 3.52237 8.65876 3.2571C9.99238 2.99183 11.3747 3.12798 12.631 3.64833C13.8872 4.16868 14.9609 5.04987 15.7164 6.18045C16.4718 7.31104 16.875 8.64025 16.875 10C16.8729 11.8227 16.1479 13.5702 14.8591 14.8591C13.5702 16.1479 11.8227 16.8729 10 16.875ZM7.5 10C7.5 10.5247 7.6651 11.0361 7.9719 11.4618C8.2787 11.8874 8.71165 12.2058 9.20943 12.3717C9.70721 12.5376 10.2446 12.5427 10.7454 12.3863C11.2463 12.2298 11.6852 11.9198 12 11.5C12.1007 11.3691 12.2486 11.2828 12.4121 11.2594C12.5755 11.2361 12.7417 11.2775 12.875 11.375C13.0076 11.4745 13.0953 11.6225 13.1187 11.7866C13.1422 11.9507 13.0995 12.1174 13 12.25C12.5278 12.8796 11.8694 13.3448 11.1181 13.5794C10.3669 13.8141 9.56082 13.8065 8.81415 13.5576C8.06748 13.3087 7.41805 12.8312 6.95785 12.1927C6.49764 11.5542 6.25 10.7871 6.25 10C6.25 9.21294 6.49764 8.44583 6.95785 7.80734C7.41805 7.16884 8.06748 6.69133 8.81415 6.44244C9.56082 6.19355 10.3669 6.1859 11.1181 6.42057C11.8694 6.65525 12.5278 7.12035 13 7.75C13.0995 7.88261 13.1422 8.04929 13.1187 8.21339C13.0953 8.37748 13.0076 8.52554 12.875 8.625C12.7417 8.72246 12.5755 8.76394 12.4121 8.74058C12.2486 8.71723 12.1007 8.63089 12 8.5C11.6852 8.08024 11.2463 7.77017 10.7454 7.61372C10.2446 7.45727 9.70721 7.46237 9.20943 7.62829C8.71165 7.79422 8.2787 8.11256 7.9719 8.53822C7.6651 8.96389 7.5 9.47529 7.5 10Z"
+                fill="black"
+              />
+            </svg>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+    import {
+      doc,
+      addDoc,
+      setDoc,
+      getFirestore,
+      collection,
+    } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAXplhIXhVFdMS-nLX7EQDGU4BQvl5jR54",
+      authDomain: "teshreen-50baa.firebaseapp.com",
+      projectId: "teshreen-50baa",
+      storageBucket: "teshreen-50baa.appspot.com",
+      messagingSenderId: "892617858401",
+      appId: "1:892617858401:web:83b64da24bd35ed4c33920",
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // console.log();
+    document.querySelector("form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+
+      const items = [];
+
+      // document.querySelector(".services-div-selected").innerHTML = "";
+
+      const addDocFunc = async (e) => {
+        Array.from(
+          document.querySelector(".services-div-selected").children
+        ).forEach((selected) => items.push(selected.textContent.trim()));
+        const newDocRef = await addDoc(collection(db, "emails"), {
+          name: formData.getAll("name")[0],
+          email: formData.getAll("email")[0],
+          phone: formData.getAll("phone")[0],
+          services: items.toString().replaceAll(",", " , "),
+        });
+        swal("تم ارسال الرساله بنجاح  ! ", "", "success");
+        [...document.querySelectorAll("input")].forEach((i) => (i.value = ""));
+        [...document.querySelectorAll(".fa-xmark")].forEach((i) => {
+          i.click();
+        });
+
+        // document.querySelector(
+        //   ".services-div-input > div:last-child p"
+        // ).textContent = "  نوع الخدمه   : ";
+      };
+      addDocFunc();
+    });
+  </script>
+</html>
