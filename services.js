@@ -1,39 +1,55 @@
 const servicesGrid = document.querySelector(".services-grid");
 const servicesSlider = document.querySelector(".swiper-wrapper");
-// export
+
+
 const servicesArray = [
   {
-    img: `https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=`,
-    title: `  حفلات الزواج والخطوبة`,
-    desc: `يمكننا التخطيط لكل التفاصيل من ( الديكور والكوش وتنسيق الورود وغيرها ) والتنفيذ بالشكل المناسب`,
+    img: `https://i.im.ge/2023/08/10/jAgp7c.image.png`,
+    title: `حفلات الزواج والخطوبة`,
+    desc: `
+    يمكننا التخطيط لكل التفاصيل من ( الديكور والكوش وتنسيق الورود وغيرها ) والتنفيذ بالشكل المناسب
+    
+    `,
   },
 
   {
-    img: `https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=`,
+    img: `https://i.im.ge/2023/08/10/jAgUZy.image.png`,
     title: `حفلات أعياد الميلاد  `,
-    desc: `يمكننا توفير حزمة حفلات كاملة و شاملة لاحتفالات أعياد الميلاد والتي تكون من اختياركم`,
+    desc: `
+     يمكننا توفير حزمة حفلات كاملة و شاملة لاحتفالات أعياد الميلاد والتي تكون من اختياركم,
+  `,
   },
   {
-    img: `https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=`,
+    img: `https://i.im.ge/2023/08/10/jAL9X0.image.png`,
     title: `حفلات تخرج`,
-    desc: `يمكننا توفير حزمة حفلات كاملة و شاملة لحفلات التخرج  والتي تكون من اختياركم`,
+    desc: `
+    يمكننا توفير حزمة حفلات كاملة و شاملة لحفلات التخرج  والتي تكون من اختياركم,
+  `,
   },
 
   {
-    img: `https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=`,
+    img: `https://i.im.ge/2023/08/10/jAL9X0.image.png`,
     title: `تنسيق مأدبة  `,
-    desc: `يمكننا تنظيم وتخطيط قائمة الطعام وخيارات التقديم وتصميم الطاولات `,
+    desc: `
+    يمكننا تنظيم وتخطيط قائمة الطعام وخيارات التقديم وتصميم الطاولات 
+    `,
   },
 
   {
-    img: `https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=`,
+    img: `https://i.im.ge/2023/08/10/jARdPG.image.png`,
     title: `التصوير الفوتوغرافي والفيديو  `,
-    desc: `لدينا مصورون محترفون ومصورو فيديو يلتقطون جميع اللحظات الرائعة والمميزة`,
+    desc: `
+    لدينا مصورون محترفون ومصورو فيديو يلتقطون جميع اللحظات الرائعة والمميزة,
+  `,
   },
   {
-    img: `https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=`,
+    img: `https://i.im.ge/2023/08/10/jA8Y5y.image.png`,
     title: `الفرق الفنية  `,
-    desc: `يتوفر لدينا تعهد وإدارة أعمال الفنانين والفنانات وأيضاً لدينا فرق شعبية وفرق أستعراضية `,
+    desc: `
+    
+    يتوفر لدينا تعهد وإدارة أعمال الفنانين والفنانات وأيضاً لدينا فرق شعبية وفرق أستعراضية 
+    
+    `,
   },
 ];
 
@@ -48,7 +64,7 @@ servicesArray.map((service) => {
         <p class='service-title' >${service.title}</p>
         <p>${service.desc}</p>
       <a   
-  href="https://wa.me/966503300942?text=السلام+عليكم+ورحمة+الله+وبركاته+%0D%0Aأتواصل+معكم+للأستفسار+عن+${service.title}"
+  href="https://wa.me/966503300942?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B+%0D%0A%D8%A3%D8%AA%D9%88%D8%A7%D8%B5%D9%84+%D9%85%D8%B9%D9%83%D9%85+%D9%84%D9%84%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1+%D8%B9%D9%86+%D8%AE%D8%AF%D9%85%D8%A9+%3A+%0D%0A${service.title}"
       target="_blank"
       >   
         <button>تواصل معنا</button>
@@ -70,7 +86,7 @@ servicesArray.map((service) => {
         <p class='service-title' >${service.title}</p>
         <p>${service.desc}</p>
       <a   
-  href="https://wa.me/966503300942?text=السلام+عليكم+ورحمة+الله+وبركاته+%0D%0Aأتواصل+معكم+للأستفسار+عن+${service.title}"
+  href="https://wa.me/966503300942?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B+%0D%0A%D8%A3%D8%AA%D9%88%D8%A7%D8%B5%D9%84+%D9%85%D8%B9%D9%83%D9%85+%D9%84%D9%84%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1+%D8%B9%D9%86+%D8%AE%D8%AF%D9%85%D8%A9+%3A+%0D%0A${service.title}"
       target="_blank"
       >   
         <button>تواصل معنا</button>
@@ -80,6 +96,8 @@ servicesArray.map((service) => {
   `.trim();
   servicesGrid.append(template.content.firstElementChild);
 });
+
+
 
 const servicesDiv = document.querySelector(".services-select");
 const servicesSelectActive = false;
