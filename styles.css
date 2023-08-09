@@ -724,8 +724,8 @@ button {
   width: 100%;
   display: flex;
   overflow: hidden;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+ border:13.5px;
+  border:1.5px solid #febaaa;
   max-width: 350px;
   flex-direction: column;
   box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.1411764706);
