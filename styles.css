@@ -724,7 +724,7 @@ button {
   width: 100%;
   display: flex;
   overflow: hidden;
- border:13.5px;
+ border-radius:13.5px;
   border:1.5px solid #febaaa;
   max-width: 350px;
   flex-direction: column;
